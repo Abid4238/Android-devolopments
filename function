@@ -1,0 +1,222 @@
+       <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/num1TextViewID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:hint="1st Number"
+        android:textSize="40dp" />
+
+    <TextView
+        android:id="@+id/num2TextViewID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:hint="2nd Number"
+        android:textSize="40dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/fiveBtnId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="calculatorFunction"
+            android:text="5"
+            android:textSize="40dp" />
+
+        <Button
+            android:id="@+id/sixBtnId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="calculatorFunction"
+            android:text="6"
+            android:textSize="40dp" />
+
+        <Button
+            android:id="@+id/sevenBtnId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="calculatorFunction"
+            android:text="7"
+            android:textSize="40dp" />
+
+        <Button
+            android:id="@+id/eightBtnId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="calculatorFunction"
+            android:text="8"
+            android:textSize="40dp" />
+
+        <Button
+            android:id="@+id/nineBtnId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="calculatorFunction"
+            android:text="9"
+            android:textSize="40dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/zeroBtnId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="calculatorFunction"
+            android:text="0"
+            android:textSize="40dp" />
+
+        <Button
+            android:id="@+id/oneBtnId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="calculatorFunction"
+            android:text="1"
+            android:textSize="40dp" />
+
+        <Button
+            android:id="@+id/twoBtnId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="calculatorFunction"
+            android:text="2"
+            android:textSize="40dp" />
+
+        <Button
+            android:id="@+id/threeBtnId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="calculatorFunction"
+            android:text="3"
+            android:textSize="40dp" />
+
+        <Button
+            android:id="@+id/fourBtnId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="calculatorFunction"
+            android:text="4"
+            android:textSize="40dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        
+
+        <Button
+            android:id="@+id/addBtnId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="calculatorFunction"
+            android:text="+"
+            android:textSize="40dp" />
+
+        <Button
+            android:id="@+id/subBtnId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="calculatorFunction"
+            android:text="-"
+            android:textSize="40dp" />
+
+        <Button
+            android:id="@+id/multiBtnId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="calculatorFunction"
+            android:text="*"
+            android:textSize="40dp" />
+
+        <Button
+            android:id="@+id/divBtnId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="calculatorFunction"
+            android:text="/"
+            android:textSize="40dp" />
+       
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/resultBtnId"
+        android:layout_width="185dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="calculatorFunction"
+        android:text="="
+        android:textSize="40dp" />
+</LinearLayout>
+
+
+
+
+public class MainActivity extends AppCompatActivity {
+    TextView primaryView, secondaryView;
+    Button digitBtn;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        primaryView = findViewById(R.id.num1TextViewID);
+        secondaryView = findViewById(R.id.num2TextViewID);
+    }
+    public void digitFunction(View myView) {
+        digitBtn = findViewById(myView.getId());
+        String initialvalue = primaryView.getText().toString();
+        String BtnValue = digitBtn.getText().toString();
+        if (initialvalue.equals("")) {
+            primaryView.setText(BtnValue);
+        } else {
+            primaryView.setText(initialvalue + BtnValue);
+        }
+    }
+        public void calculatorFunction (View view){
+            primaryView.setText("");
+            secondaryView.setText("");
+        }
+    }
+
+
